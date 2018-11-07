@@ -11,8 +11,10 @@ puts "----------"
 
 # Your code goes here ...
 
-puts "What is the name store's name"
+puts "What is the store's name"
 store_name = gets.chomp
 
-store7 = Store.create( name: store_name)
+store7 = Store.create( name: store_name, annual_revenue: 100000, mens_apparel: false, womens_apparel: false)
 puts store7.errors.messages
+store7.save
+
